@@ -1,6 +1,4 @@
-    /* =============================================
-       COLORS — change these to restyle the whole page
-    ============================================= */
+    /* == Change these to restyle the page == */
     :root {
       --bg:      #f5f7ff;
       --white:   #ffffff;
@@ -13,9 +11,32 @@
       --wrong:   #f44336;
     }
 
-    /* =============================================
-       BASE
-    ============================================= */
+    /* == LABEL == */
+    .label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      letter-spacing: 0.03em;
+    }
+    
+    /* Gain = green (positive) */
+    .label.gain {
+      background: rgba(76, 175, 80, 0.12);
+      color: #2e7d32;
+      border: 1px solid rgba(76, 175, 80, 0.3);
+    }
+    
+    /* Risk = red (warning) */
+    .label.risk {
+      background: rgba(244, 67, 54, 0.12);
+      color: #c62828;
+      border: 1px solid rgba(244, 67, 54, 0.3);
+    }
+    
+    /* == BASE == */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -31,9 +52,7 @@
         scroll-behavior: smooth;
       }
 
-    /* =============================================
-       NAVBAR
-    ============================================= */
+    /* == NAVBAR == */
     nav {
       background: var(--white);
       border-bottom: 2px solid var(--border);
@@ -69,9 +88,7 @@
 
     .nav-links a:hover { color: var(--primary); }
 
-    /* =============================================
-       Banner Section
-    ============================================= */
+    /* == Banner Section == */
     .banner {
       background: var(--primary);
       color: white;
@@ -101,9 +118,7 @@
 
     .banner-btn:hover { opacity: 0.85; }
 
-    /* =============================================
-       SECTIONS
-    ============================================= */
+    /* == SECTIONS == */
     section {
       max-width: 880px;
       margin: 50px auto;
@@ -120,9 +135,7 @@
 
     section p { margin-bottom: 10px; }
 
-    /* =============================================
-       CARDS
-    ============================================= */
+    /* == CARDS == */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -149,9 +162,73 @@
 
     .card p { font-size: 0.85rem; color: var(--muted); margin: 0; }
 
-    /* =============================================
-       OPTIONS TABLE
-    ============================================= */
+    .feature-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-family: 'Space Mono', monospace;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+  }
+  .tag-red { background: rgba(255,107,107,0.15); color: var(--red); border: 1px solid rgba(255,107,107,0.3); }
+  .tag-orange { background: rgba(255,169,77,0.15); color: var(--orange); border: 1px solid rgba(255,169,77,0.3); }
+  .tag-purple { background: rgba(132,94,247,0.15); color: var(--purple); border: 1px solid rgba(132,94,247,0.3); }
+  .tag-green { background: rgba(81,207,102,0.15); color: var(--green); border: 1px solid rgba(81,207,102,0.3); }
+  .tag-blue { background: rgba(51,154,240,0.15); color: var(--blue); border: 1px solid rgba(51,154,240,0.3); }
+
+/* == DEEP DIVE == */
+
+.deep-dive-section {
+  max-width: 880px;
+  margin: 50px auto;
+  padding: 0 24px;
+}
+
+.deep-dive-inner {
+  width: 100%;
+}
+
+.deep-dive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.dd-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.dd-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+.dd-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.dd-card h4 {
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.dd-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+    /* == OPTIONS TABLE == */
     .options-table {
       width: 100%;
       border-collapse: collapse;
@@ -175,9 +252,7 @@
     .options-table tr:nth-child(even) { background: #f0f3ff; }
     .options-table tr.best td { background: #e8f5e9; font-weight: 600; }
 
-    /* =============================================
-       DISCUSSION QUESTIONS
-    ============================================= */
+    /* == DISCUSSION QUESTIONS == */
     .q-list {
       list-style: none;
       margin-top: 14px;
@@ -195,9 +270,7 @@
       font-size: 0.92rem;
     }
 
-    /* =============================================
-       QUIZ
-    ============================================= */
+    /* == QUIZ == */
     #quiz {
       background: var(--white);
       border: 1px solid var(--border);
@@ -294,9 +367,7 @@
       cursor: pointer;
     }
 
-    /* =============================================
-       MINI GAME AREA
-    ============================================= */
+    /* == MINI GAME AREA == */
 
     #mini-game h2 {
       font-size: 1.5rem;
@@ -321,9 +392,7 @@
       overflow: idden;
     }
 
-    /* =============================================
-       FOOTER
-    ============================================= */
+    /* == FOOTER == */
     footer {
       text-align: center;
       padding: 28px 24px;
@@ -336,9 +405,7 @@
 
     footer p + p { margin-top: 5px; }
 
-    /* =============================================
-       RESPONSIVE
-    ============================================= */
+    /* == RESPONSIVE == */
     @media (max-width: 640px) {
       .nav-links { gap: 10px; }
       .banner h1  { font-size: 1.5rem; }
